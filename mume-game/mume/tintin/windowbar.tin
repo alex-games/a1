@@ -1,0 +1,44 @@
+#if {"${windowsize}" == ""} {#variable {windowsize} {10}}
+#list {window} {clear}
+#$windowsize {#list {window} {add} {{ }}}
+#split {$windowsize}
+
+#nop Generic communication matchers (unused for now)
+#nop act {~%S %S: %*} {showtowin %0}
+#nop act {~%S %S '%*} {showtowin %0}
+
+#act {^%S says '%*}		{#tab %1;showtowin <069>%0<099>}
+#act {^%S narrates '%*}		{#tab %1;showtowin <039>%0<099>}
+#act {^%S tells the group '%*} 	{#tab %1;showtowin <029>%0<099>}
+#act {^%S tells you '%*}  	{#tab %1;showtowin <029>%0<099>;#variable reply %1}
+#alias re {tell $reply %0;#echo {Message sent to $reply.}}
+
+#alias {showtowin}
+{
+	#format temp {%w} {%0};
+	#if {"${temp[1]}" == ""} {#list temp set 1 { }};
+
+	#loop {1} {&temp[]} {cnt}
+	{
+		#list window ins -1 {$temp[$cnt]}
+	};
+
+	#loop {$windowsize} {&window[]} {cnt}
+	{
+		#list window del 1
+	};
+
+	#loop {1} {$windowsize} {cnt}
+	{
+		#echo {{$window[$cnt]} {-$cnt}}
+	}
+}
+
+showtowin
+
+#alias {test_windowbar}
+{
+	#showme <138>Bubba tells you 'hello';
+	#showme <158>Pamela says 'bye'
+}
+

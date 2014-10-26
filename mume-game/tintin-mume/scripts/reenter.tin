@@ -1,0 +1,19 @@
+#gag {^You flee head over heels.$}
+#gag {^You seek to escape...$}
+
+#sub {^PANIC! You {couldn't escape|can't quit the fight}!$} {Panic!}
+
+#var lastFled {none}
+
+#action {^You flee {north|south|east|west|up|down}.$} {
+	#var lastFled {%1};
+	#echo {%1!};
+	#line gag
+}
+
+#alias {v} {
+	#if {("$lastFled" != "none") && (&reverseDirections[$lastFled])} {
+		#send {$reverseDirections[$lastFled]};
+		#var lastFled {none}
+	}
+}

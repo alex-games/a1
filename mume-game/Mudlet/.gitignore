@@ -1,0 +1,10 @@
+/build*
+*.pro.user
+Makefile
+ui_*.h
+moc_*.cpp
+qrc_*.cpp
+*.o
+*.dmg
+*.app
+mudlet

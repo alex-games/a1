@@ -1,0 +1,31 @@
+body {
+    // font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+#output {
+    border: 1px solid black;
+    background: #ac9;
+    color: #030;
+}
+
+#info {
+    position: fixed;
+    right: 8px;
+    top: 1em;
+    border: 1px solid black;
+    padding: 5px;
+    background: #efe;
+    color: #020;
+}
+
+#command {
+    width: 100%;
+}
+
+#command_form {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,52 @@
+body
+    {
+     font-family:Monaco, Courier;
+     background:black;
+     color:white;
+     font-size:15px;
+    }
+
+#wrapper
+{
+	width:960px;
+	margin:0 auto;
+} 
+#out {
+      width:930px;;
+      height:500px;
+       	
+		overflow:auto; 
+}
+ 
+ .status{
+ 	color:red;
+ 	font-size: 10px;
+ }
+ 
+ #infield {
+   width:840px; 	
+ }
+
+/*  MUME RELETED SURF */ 
+prompt {} 
+song {color:yellow}
+room {}
+name { color:green;}
+description{}
+terrain {}
+magic {}
+pray { color:cyan;}
+narrate {color:yellow;}
+tell {color:green;}
+enemy {font-weight:bold;}
+status{}
+say { color:cyan}
+exits {};
+header{font-weight:bold;}
+weather{};
+hit {color:cyan};
+damage{color:red;};
+look {color:green};
+
+
+

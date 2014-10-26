@@ -1,0 +1,10 @@
+tmp/*
+log/*
+*~
+.DS_Store
+*.tmproj
+*.o
+characters.tin
+src
+bin
+*.log

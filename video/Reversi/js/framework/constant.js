@@ -1,0 +1,14 @@
+var MAX_X = 8;
+var MAX_Y = 8;
+
+var NODE_ID_NONE = 0;
+var NODE_ID_WHITE = 1;
+var NODE_ID_BLACK = 2;
+
+var SET_NODE_SUCCEEDED = 0;
+var SET_NODE_OUT_OF_RANGE = 1;
+var SET_NODE_EXIST = 2;
+var SET_NODE_CAN_NOT_SET = 3;
+
+var INT_U_LIMIT = 99999;
+var INT_L_LIMIT = -99999;
